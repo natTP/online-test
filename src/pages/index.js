@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import FlexContainer from '../src/components/flexContainer'
-import Button from '../src/components/button'
-import TextField from '../src/components/textField'
+import FlexContainer from '../components/flexContainer'
+import Button from '../components/button'
+import TextField from '../components/textField'
 
 const Home = () => {
   return (

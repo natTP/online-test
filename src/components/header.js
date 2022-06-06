@@ -16,7 +16,7 @@ const Header = () => {
       extra={
         <div>
           <Avatar icon={<UserOutlined />} />
-          <Text>ชื่อของผมคือออ</Text>
+          <Text>ชื่อของผมก็คือออ</Text>
         </div>
       }
     />
