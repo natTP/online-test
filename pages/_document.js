@@ -1,14 +1,17 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: 'Mali', sans-serif;
   }
 
+  html, body {
+    height: 100%;
+  }
 `
 
 class MyDocument extends Document {
@@ -22,7 +25,7 @@ class MyDocument extends Document {
           enhanceApp: (App) => (props) =>
             sheet.collectStyles(
               <>
-                <GlobalStyle />
+                <GlobalStyles />
                 <App {...props} />
               </>
             ),
