@@ -1,11 +1,11 @@
 import 'antd/dist/antd.css'
-import MyLayout from '../components/layout'
+import Layout from '../components/layout'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <MyLayout>
+    <Layout>
       <Component {...pageProps} />
-    </MyLayout>
+    </Layout>
   )
 }
 
