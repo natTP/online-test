@@ -6,8 +6,8 @@ const StyledInput = styled(Input)`
   border-radius: 7px;
 `
 
-const TextField = ({ placeholder }) => {
-  return <StyledInput placeholder={placeholder} size='large' />
+const TextField = ({ placeholder, ...props }) => {
+  return <StyledInput placeholder={placeholder} size='large' {...props} />
 }
 
 export default TextField
