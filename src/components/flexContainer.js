@@ -3,13 +3,13 @@ import styled from 'styled-components'
 
 const StyledContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => props.direction};
   gap: 1rem;
-  padding: 5rem 0rem;
+  padding: 1rem 0rem;
 `
 
-const FlexContainer = ({ children }) => {
-  return <StyledContainer>{children}</StyledContainer>
+const FlexContainer = ({ children, direction }) => {
+  return <StyledContainer direction={direction}>{children}</StyledContainer>
 }
 
 export default FlexContainer
