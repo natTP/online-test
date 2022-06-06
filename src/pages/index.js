@@ -16,8 +16,8 @@ const Home = () => {
 
   const [inputValue, setInputValue] = useState(name)
 
-  const handleChange = (e) => {
-    setInputValue(e.target.value)
+  const handleChange = (event) => {
+    setInputValue(event.target.value)
   }
 
   const handleSubmit = () => {

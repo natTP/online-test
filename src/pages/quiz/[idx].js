@@ -6,6 +6,9 @@ import questions from '../../questions'
 import Button from '../../components/button'
 import QuestionItem from '../../components/questionItem'
 import FlexContainer from '../../components/flexContainer'
+import { Typography } from 'antd'
+
+const { Text } = Typography
 
 const QuizPage = () => {
   const router = useRouter()
@@ -21,6 +24,7 @@ const QuizPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
+      <Text type='secondary'>{`ข้อที่ ${idx} จาก ${questions.length}`}</Text>
       <QuestionItem question={question} />
       <FlexContainer direction='row'>
         <Button type='default'>

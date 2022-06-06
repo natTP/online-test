@@ -8,6 +8,7 @@ const { Text } = Typography
 
 const StyledHeader = styled(PageHeader)`
   background-color: white;
+  margin-bottom: 1rem;
   .ant-page-header-heading-title {
     color: #1890ff;
   }
