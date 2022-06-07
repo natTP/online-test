@@ -10,7 +10,7 @@ import {
   REGISTER,
   REHYDRATE,
 } from 'redux-persist'
-import storage from 'redux-persist/lib/storage'
+import storage from './persistStorage'
 import reducer from './reducer'
 
 const persistConfig = {
