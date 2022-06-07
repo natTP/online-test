@@ -57,7 +57,8 @@ const QuizPage = () => {
           <LeftOutlined /> ข้อที่แล้ว
         </Button>
         <Button onClick={handleForwardClick} disabled={answer === 0}>
-          ข้อถัดไป <RightOutlined />
+          {idx === questions.length ? 'ส่งข้อสอบ' : 'ข้อถัดไป'}
+          <RightOutlined />
         </Button>
       </FlexContainer>
     </div>
