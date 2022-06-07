@@ -7,15 +7,27 @@ const initialState = {
   score: 0,
 }
 
-const editName = createAction('setName')
-const editAnswer = createAction('setAnswer')
+const calculateScore = (state) => {
+  let score = 0
+  for (let idx = 0; idx < questions.length; idx++) {
+    if (questions[idx].answerId === state.answers[idx]) score += 1
+  }
+  return score
+}
+
+const setName = createAction('setName')
+const setAnswer = createAction('setAnswer')
 
 const reducer = createReducer(initialState, (builder) => {
   builder
-    .addCase(editName, (state, action) => {
+    .addCase(setName, (state, action) => {
       state.name = action.payload
     })
-    .addCase(editAnswer, (state, action) => {})
+    .addCase(setAnswer, (state, action) => {
+      const idx = action.payload.idx
+      state.answers[idx] = action.payload.value
+      state.score = calculateScore(state)
+    })
     .addDefaultCase((state, action) => {})
 })
 
