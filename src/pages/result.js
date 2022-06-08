@@ -10,7 +10,7 @@ const { Title } = Typography
 
 const ResultText = styled.span`
   .highlight {
-    color: ${(props) => (props.pass ? '#7cb305' : '#cf1322')};
+    color: ${({ pass }) => (pass ? '#7cb305' : '#cf1322')};
   }
 `
 
